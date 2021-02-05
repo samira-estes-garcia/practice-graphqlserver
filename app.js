@@ -1,6 +1,7 @@
 const express = require('express')
 const graphqlHTTP = require('express-graphql').graphqlHTTP;
 const schema = require('./schema.js')
+const PORT = process.env.PORT || 3000
 
 const app = express()
 
@@ -12,6 +13,4 @@ app.use(
     })
   )
 
-app.listen(3000, () => {
-  console.log('App listening on port 3000')
-})
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
