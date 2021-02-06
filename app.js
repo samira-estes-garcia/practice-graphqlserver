@@ -6,9 +6,9 @@ const cors = require( `cors` )
 
 const app = express()
 
-// app.use( cors() );
+app.use( cors() );
 app.use(
-    // '/graphql',
+    '/graphql',
     graphqlHTTP({
       schema: schema,
       graphiql: true,
