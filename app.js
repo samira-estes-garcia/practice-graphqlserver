@@ -8,7 +8,7 @@ const app = express()
 
 app.use( cors() );
 app.use(
-    '/graphql',
+    // '/graphql',
     graphqlHTTP({
       schema: schema,
       graphiql: true,
